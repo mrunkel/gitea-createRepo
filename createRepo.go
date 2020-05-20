@@ -21,9 +21,9 @@ func main() {
 		os.Exit(2)
 	}
 	repoName := os.Args[1]
-	token, found := os.LookupEnv("API_TOKEN")
+	token, found := os.LookupEnv("GITEA_TOKEN")
 	if !found {
-		fmt.Println("Must set API_TOKEN environment variable")
+		fmt.Println("Must set GITEA_TOKEN environment variable")
 		os.Exit(2)
 	}
 	url := "https://gitea.pfdev.de/api/v1/user/repos"
